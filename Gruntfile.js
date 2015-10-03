@@ -23,10 +23,11 @@ module.exports = function(grunt) {
 
     //Load tasks from the specified Grunt plugin.
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-fixmyjs');
 
     //Register an "alias task" or a task function.
     grunt.registerTask('lint', ['jshint', 'jscs']);
-    grunt.registerTask('test', ['lint', 'jasmine']);
+    grunt.registerTask('test', [ 'jasmine']);
     grunt.registerTask('serve', ['connect:server']);
     grunt.registerTask('dist', ['clean', 'test', 'requirejs']);
 

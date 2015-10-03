@@ -10,14 +10,14 @@ module.exports = function() {
         source: {
             options: {
                 optimize: 'none',
-                out: 'dist/api.src.js'
+                out: 'dist/seat-booking-system.src.js'
             }
         },
         minified: {
             options: {
                 optimize: 'uglify2',
                 generateSourceMaps: false,
-                out: 'dist/api.js'
+                out: 'dist/seat-booking-system.min.js'
             }
         }
     };

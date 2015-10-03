@@ -1,6 +1,6 @@
 require.config({
   baseUrl: 'src/',
   paths: {
-    'seatbooking': './'
+    'seat-booking-system': './'
   }
 });
