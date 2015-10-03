@@ -1,0 +1,15 @@
+{
+    "gruntfile": "Gruntfile.js",
+    "taskfiles": "tasks/**/*.js",
+    "paths": {
+        "src": "src/",
+        "test": "test/",
+        "dist": "dist/",
+        "docs": "docs/",
+        "requireConfig": "src/config.js"
+    },
+    "server": {
+        "hostname": "localhost.bbc.co.uk",
+        "port": 9091
+    }
+}

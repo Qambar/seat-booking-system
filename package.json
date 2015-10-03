@@ -1,0 +1,33 @@
+{
+  "name": "seat-booking-system",
+  "version": "0.1.0",
+  "description": "Javascript client library for interacting with the api",
+  "author": "Qambar Raza",
+  "scripts": {
+    "test": "node_modules/grunt-cli/bin/grunt test",
+    "prepublish": "node_modules/grunt-cli/bin/grunt dist"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Qambar/seat-booking-system"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs": "~0.7.1",
+    "grunt-template-jasmine-requirejs": "^0.2.0",
+    "jasmine-ajax": "^3.1.1",
+    "jscs": "^1.6.1",
+    "jscs-jsdoc": "0.4.4",
+    "load-grunt-tasks": "~0.6.0",
+    "time-grunt": "^1.0.0",
+    "tin": "^0.5.0"
+  }
+}

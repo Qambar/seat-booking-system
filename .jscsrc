@@ -1,0 +1,36 @@
+{
+  "requireCurlyBraces": ["else", "for", "while", "do", "try", "catch"],
+  "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
+  "requireSpacesInFunctionExpression": { "beforeOpeningCurlyBrace": true },
+  "disallowSpacesInFunctionExpression": { "beforeOpeningRoundBrace": true },
+  "requireSpacesInsideObjectBrackets": "allButNested",
+  "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
+  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+  "requireSpaceBeforeBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+  "requireSpaceAfterBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+  "disallowMultipleLineBreaks": true,
+  "validateLineBreaks": "LF",
+  "validateIndentation": 2,
+  "disallowKeywordsOnNewLine": ["else"],
+  "requireLineFeedAtFileEnd": true,
+  "safeContextKeyword": "self",
+  "requireCapitalizedConstructors": true,
+  "validateJSDoc": {
+    "checkParamNames": true,
+    "checkRedundantParams": true,
+    "requireParamTypes": true
+  },
+  "excludeFiles": ["node_modules/**"],
+  "additionalRules": [
+    "node_modules/jscs-jsdoc/lib/rules/*.js"
+  ],
+  "jsDoc": {
+    "checkParamNames": true,
+    "checkRedundantParams": true,
+    "requireParamTypes": true,
+    "checkReturnTypes": true,
+    "checkRedundantReturns": true,
+    "requireReturnTypes": true,
+    "checkTypes": true
+  }
+}
