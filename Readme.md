@@ -19,3 +19,11 @@ You will see something like this in your console:
 
 ![Screenshot of console](console-screenshot.png)
 
+It will automatically start the webserver on your local so now you can visit:
+
+```
+http://localhost.bbc.co.uk:9091/
+```
+
+To view the demo for a "Train Seat Booking System".
+

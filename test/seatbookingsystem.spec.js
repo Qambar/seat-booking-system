@@ -1,7 +1,7 @@
-define(['seat-booking-system/main'], function(SeatBookingSystem) {
+define(['seatbookingsystem'], function(SeatBookingSystem) {
   'use strict';
 
-  describe('seat-booking-system.main', function() {
+  describe('seatbookingsystem', function() {
     var sbs;
 
     beforeEach(function() {
@@ -23,6 +23,10 @@ define(['seat-booking-system/main'], function(SeatBookingSystem) {
       for (var i = 1; i <= 5; i++) {
         sbs.book(i).forEach(checkSeatAvailable);
       }
+    });
+
+    it('returns all the available seats', function() {
+      expect(sbs.getAllSeats().length).toEqual(14);
     });
 
   });

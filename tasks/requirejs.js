@@ -5,19 +5,19 @@ module.exports = function() {
         options: {
             baseUrl: 'src/',
             mainConfigFile: '<%= config.paths.requireConfig %>',
-            name: 'seat-booking-system/main'
+            name: 'seatbookingsystem'
         },
         source: {
             options: {
                 optimize: 'none',
-                out: 'dist/seat-booking-system.src.js'
+                out: 'dist/seatbookingsystem.js'
             }
         },
         minified: {
             options: {
                 optimize: 'uglify2',
                 generateSourceMaps: false,
-                out: 'dist/seat-booking-system.min.js'
+                out: 'dist/seatbookingsystem.min.js'
             }
         }
     };

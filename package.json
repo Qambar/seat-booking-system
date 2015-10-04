@@ -28,6 +28,7 @@
     "jscs-jsdoc": "0.4.4",
     "load-grunt-tasks": "~0.6.0",
     "time-grunt": "^1.0.0",
-    "tin": "^0.5.0"
+    "requirejs": "2.1.20",
+    "jquery": "^1.9"
   }
 }

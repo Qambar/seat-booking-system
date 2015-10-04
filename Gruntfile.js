@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dist', ['clean', 'test', 'requirejs']);
 
     //Default
-    grunt.registerTask('default', ['clean', 'test', 'requirejs']);
+    grunt.registerTask('default', ['requirejs', 'connect:server']);
 
 
 };

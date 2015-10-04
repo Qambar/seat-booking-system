@@ -6,7 +6,9 @@
         "test": "test/",
         "dist": "dist/",
         "docs": "docs/",
-        "requireConfig": "src/config.js"
+        "example": "example/",
+        "requireConfig": "src/config.js",
+        "nodeModules": "node_modules"
     },
     "server": {
         "hostname": "localhost.bbc.co.uk",

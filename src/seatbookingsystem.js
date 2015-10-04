@@ -4,9 +4,9 @@ define([
 ], function(SeatsInitializer, SeatsFinder) {
   'use strict';
 
-  var Main;
+  var SeatBookingSystem;
 
-  Main = function(options) {
+  SeatBookingSystem = function(options) {
     options = options || {};
 
     this.totalSeats           = options.totalSeats || 67;
@@ -17,10 +17,10 @@ define([
 
     this.init();
   };
-  Main.prototype = {
+  SeatBookingSystem.prototype = {
 
     _seatsFinder: null,
-
+    _seats: [],
     /**
      * Initializes seats and seats finder.
      */
@@ -31,10 +31,10 @@ define([
         'maxBookingPerPerson': this.maxBookingPerPerson
       });
 
-      var seats = seatsInitializer.getSeats();
+      this._seats = seatsInitializer.getSeats();
 
       this._seatsFinder = new SeatsFinder(
-        seats,
+        this._seats,
         this.maxBookingPerPerson
       );
     },
@@ -52,8 +52,14 @@ define([
         });
       }
       return seats;
-    }
+    },
 
+    /**
+     * @returns {Array} all seats
+     */
+    getAllSeats: function() {
+      return this._seats;
+    }
   };
-  return Main;
+  return SeatBookingSystem;
 });
