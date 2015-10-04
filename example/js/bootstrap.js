@@ -52,6 +52,7 @@ require(['jquery', 'seatbookingsystem', 'seatmapgenerator'], function($, SeatBoo
     };
 
     sbs.cancel(seatPosition);
+    countBooked = countBooked - 1;
     smg.refresh();
   });
 
