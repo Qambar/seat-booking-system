@@ -5,7 +5,7 @@ module.exports = function() {
         options: {
             baseUrl: 'src/',
             mainConfigFile: '<%= config.paths.requireConfig %>',
-            name: 'seat-booking-system/api'
+            name: 'seat-booking-system/main'
         },
         source: {
             options: {

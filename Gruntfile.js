@@ -27,12 +27,12 @@ module.exports = function(grunt) {
 
     //Register an "alias task" or a task function.
     grunt.registerTask('lint', ['jshint', 'jscs']);
-    grunt.registerTask('test', [ 'jasmine']);
+    grunt.registerTask('test', [ 'lint', 'jasmine']);
     grunt.registerTask('serve', ['connect:server']);
     grunt.registerTask('dist', ['clean', 'test', 'requirejs']);
 
     //Default
-    grunt.registerTask('default', ['clean', 'test']);
+    grunt.registerTask('default', ['clean', 'test', 'requirejs']);
 
 
 };

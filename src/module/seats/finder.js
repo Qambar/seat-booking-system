@@ -18,7 +18,7 @@ define(['seat-booking-system/module/seat'], function() {
     _seatsAvailableInEachRow: [],
 
     /**
-     * @param numOfSeatsRequired
+     * @param {int} numOfSeatsRequired
      * @returns {Array}
      */
     find: function(numOfSeatsRequired) {
@@ -50,34 +50,17 @@ define(['seat-booking-system/module/seat'], function() {
         return normalSeats;
       }
 
-
-      //var maxSeatsAvailableInRow = this._getMaxNumberOfSeatsInRow();
-      //
-      //this._seatsAvailableInEachRow.filter(function(seatsRow) {
-      //  return seatsRow.length === numOfSeatsRequired;
-      //});
-      //
-      //
-      //if (availableSeats.length === numOfSeatsRequired) {
-      //  return availableSeats;
-      //}
-      //Try to find it anywhere
-      // Case # 4
-      // Not enough seats availble.
+      //Default:
+      //  Not found any available seats
       return [];
     },
 
+    /**
+     * Calculates available seats
+     * @private
+     */
     _calculateAvailableSeats: function() {
       this._seatsAvailableInEachRow = this._getAllAvailableSeats();
-    },
-
-    _getMaxNumberOfSeatsInRow: function() {
-      return Math.max.apply(
-        Math,
-        this._seatsAvailableInEachRow.map(function(o) {
-          return o.length;
-        })
-      );
     },
 
     /**

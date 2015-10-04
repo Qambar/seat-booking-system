@@ -1,4 +1,4 @@
-define(['seat-booking-system/module/seats/initializer',], function(SeatsInitializer) {
+define(['seat-booking-system/module/seats/initializer'], function(SeatsInitializer) {
   'use strict';
 
   describe('seat-booking-system.module.seats.initializer', function() {

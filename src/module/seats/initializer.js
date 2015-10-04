@@ -15,11 +15,20 @@ define(['seat-booking-system/module/seat'], function(Seat) {
   };
   Initializer.prototype = {
 
-    _seats: null,
+    _seats: [],
 
+    /**
+     * Returns seats
+     * @returns {Array}
+     */
     getSeats: function() {
       return this._seats;
     },
+    /**
+     * Initializes the seats
+     * @returns {Array}
+     * @private
+     */
     _initSeats: function() {
       this._seats = [];
 

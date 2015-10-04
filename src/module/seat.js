@@ -20,6 +20,11 @@ define([''], function() {
   };
 
   Seat.prototype =  {
+
+    /**
+     * Books a seat
+     * @returns {boolean} true on operation success
+     */
     book: function() {
       if (this.isAvailable()) {
         this.booked = true;
@@ -27,6 +32,10 @@ define([''], function() {
       }
       throw new Error('Seat is already booked.');
     },
+    /**
+     * Cancel's a seat
+     * @returns {boolean} true on operation success
+     */
     cancel: function() {
       if (!this.isAvailable()) {
         this.booked = false;
@@ -34,6 +43,10 @@ define([''], function() {
       }
       throw new Error('Seat was never booked.');
     },
+    /**
+     * Checks if seat is available
+     * @returns {boolean}
+     */
     isAvailable: function() {
       return !this.booked;
     }
