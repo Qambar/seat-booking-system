@@ -1,3 +1,13 @@
+body div {
+    transition:all 0.3s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .seat {
     width: 16.67%;
     height: 32px;
@@ -7,6 +17,7 @@
     background-color:firebrick;
     color: white;
     text-align:center;
+    cursor: pointer;
 }
 .seat-available {
     background-color: yellowgreen;
@@ -30,8 +41,13 @@
     text-align:center;
 }
 
-.legend {
+.legend, .instructions {
     text-align: center;
     width: 300px;
     margin: auto;
+    padding: 5px;
+}
+.instructions {
+    width: 350px;
+    font-style: italic;
 }

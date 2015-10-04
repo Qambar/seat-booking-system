@@ -44,4 +44,15 @@ require(['jquery', 'seatbookingsystem', 'seatmapgenerator'], function($, SeatBoo
     smg.refresh();
   });
 
+  $(options.seatMapContainer).on('click', '.js-seat-booked', function() {
+    "use strict";
+    var seatPosition = {
+      'row': parseInt($(this).data('row')),
+      'col': parseInt($(this).data('col'))
+    };
+
+    sbs.cancel(seatPosition);
+    smg.refresh();
+  });
+
 });

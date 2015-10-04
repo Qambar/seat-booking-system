@@ -32,8 +32,8 @@ define(['jquery'], function() {
     getUISeat: function(seat) {
       var uiSeat = $('<div>').addClass('seat');
 
-      uiSeat.data('row', seat.row);
-      uiSeat.data('col', seat.col);
+      uiSeat.attr('data-row', seat.row);
+      uiSeat.attr('data-col', seat.col);
 
       var seatNumber = (seat.col+1) +  ("0" + (seat.row+1)).slice(-2);
       if (seat.isAvailable()) {
@@ -41,6 +41,8 @@ define(['jquery'], function() {
       } else {
         uiSeat.removeClass('seat-available');
         seatNumber = seatNumber + "B";
+        uiSeat.attr('title', 'Click to unbook this seat');
+        uiSeat.addClass('js-seat-booked');
       }
 
       uiSeat.text(seatNumber);

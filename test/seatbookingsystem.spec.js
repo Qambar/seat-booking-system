@@ -35,6 +35,20 @@ define(['seatbookingsystem'], function(SeatBookingSystem) {
       }).toThrow(new Error('Invalid Argument for numOfSeatsRequired'));
     });
 
+    it('can cancel seats by taking seat position', function() {
+      var seat = sbs.book(1)[0];
+
+      //Verify seat is booked
+      expect(seat.isAvailable()).toBe(false);
+
+      sbs.cancel({
+        'row': seat.row,
+        'col': seat.col
+      });
+      //Seat should now be available
+      expect(seat.isAvailable()).toBe(true);
+    });
+
   });
 
 });

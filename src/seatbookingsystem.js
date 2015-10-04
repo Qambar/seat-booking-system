@@ -61,6 +61,24 @@ define([
     },
 
     /**
+     *
+     * @param {object} seatPosition object containing row and col
+     * @returns {boolean} returns true if operation is success
+     */
+    cancel: function(seatPosition) {
+      if (
+        isNaN(seatPosition.row) ||
+        isNaN(seatPosition.col) ||
+        seatPosition.row > this.numOfRows ||
+        seatPosition.col > this.seatsInOneRow
+      ) {
+        throw new Error('Invalid seat position');
+      }
+
+      return this._seats[seatPosition.row][seatPosition.col].cancel();
+    },
+
+    /**
      * @returns {Array} all seats
      */
     getAllSeats: function() {
