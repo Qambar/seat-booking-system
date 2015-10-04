@@ -27,3 +27,5 @@ http://localhost.bbc.co.uk:9091/
 
 To view the demo for a "Train Seat Booking System".
 
+![Screenshot of example demo](train-booking-system-example.png)
+
