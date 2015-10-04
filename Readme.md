@@ -24,6 +24,11 @@ It will automatically start the webserver on your local so now you can visit:
 ```
 http://localhost.bbc.co.uk:9091/
 ```
+or if you want a live demo, open the following link in your browser:
+
+```
+http://qambar.github.io/seat-booking-system/
+```
 
 To view the demo for a "Train Seat Booking System".
 
