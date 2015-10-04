@@ -19,13 +19,13 @@ define(['seat-booking-system/module/seats/initializer'], function(SeatsInitializ
     });
 
     it('total cols are correct for all but row with minimum number of seats', function() {
-      for (var i = 1; i < seats.length; i++) {
+      for (var i = 0; i < (seats.length - 1); i++) {
         expect(seats[i].length).toEqual(5);
       }
     });
 
     it('total cols are correct for row with minimum number of seats', function() {
-      expect(seats[0].length).toEqual(2);
+      expect(seats[seats.length - 1].length).toEqual(2);
     });
 
   });

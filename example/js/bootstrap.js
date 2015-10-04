@@ -2,11 +2,12 @@ requirejs.config({
   "baseUrl": "../",
   "paths": {
     "seatbookingsystem": "dist/seatbookingsystem",
-    "jquery": "node_modules/jquery/dist/jquery.min"
+    "jquery": "node_modules/jquery/dist/jquery.min",
+    "seatmapgenerator": "js/seatmapgenerator"
   }
 });
 
-require(['jquery', 'seatbookingsystem'], function($, SeatBookingSystem) {
+require(['jquery', 'seatbookingsystem', 'seatmapgenerator'], function($, SeatBookingSystem, SeatMapGenerator) {
 
   var options = {
     'totalSeats' : 67,
@@ -14,17 +15,33 @@ require(['jquery', 'seatbookingsystem'], function($, SeatBookingSystem) {
     'maxBookingPerPerson': 5
   };
 
-
   var sbs = new SeatBookingSystem(options);
-  
 
+  options.seatMapContainer = '#js-seat-map-container';
+  var smg = new SeatMapGenerator(sbs.getAllSeats(), options);
+  smg.generate();
 
-  for (var i = 1; i <= 13; i++) {
-    console.log(sbs.book(5));
-  }
-  console.log(sbs.book(2));
+  var countBooked = 0;
 
-  console.log(sbs.book(2));
+  $('.js-book-seat').click(function(e) {
+    "use strict";
 
+    e.preventDefault();
+
+    if (countBooked == options.totalSeats) {
+      alert("Carriage is full");
+      return;
+    }
+
+    var numOfRequiredSeats = parseInt($('.js-number-of-seats').val());
+    var seatsBooked = sbs.book(numOfRequiredSeats);
+    if (seatsBooked.length === 0) {
+      alert("Not enough seats available!");
+    }
+
+    countBooked += seatsBooked.length;
+
+    smg.refresh();
+  });
 
 });

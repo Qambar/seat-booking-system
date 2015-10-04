@@ -1,4 +1,4 @@
-define(['seat-booking-system/module/seat'], function(Seat) {
+define(['module/seat'], function(Seat) {
   'use strict';
 
   var Initializer;
@@ -48,10 +48,6 @@ define(['seat-booking-system/module/seat'], function(Seat) {
         }//endfor
 
       }//endfor
-
-      // Reversing the array so that it starts filling up
-      // from the minimum number of seats.
-      this._seats.reverse();
 
       return this._seats;
     }

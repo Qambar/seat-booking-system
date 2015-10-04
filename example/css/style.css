@@ -1,0 +1,37 @@
+.seat {
+    width: 16.67%;
+    height: 32px;
+    border: dimgray 1px SOLID;
+    display: inline-block;
+    margin: 1px;
+    background-color:firebrick;
+    color: white;
+    text-align:center;
+}
+.seat-available {
+    background-color: yellowgreen;
+}
+.seat:nth-child(5n-1) {
+    margin-left: 10%;
+}
+
+.seat-map-container {
+    width: 300px;
+    text-align:right;
+    margin: auto;
+}
+
+.booking-form  {
+    text-align:center;
+    padding: 20px;
+    margin: auto;
+}
+.main-heading {
+    text-align:center;
+}
+
+.legend {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}

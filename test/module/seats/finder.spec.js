@@ -118,6 +118,20 @@ define([
 
     });
 
+    it('does not return any seats if required seats are greater than available', function() {
+      //Book all seats
+      seats.forEach(function(seatsRow) {
+        seatsRow.forEach(function(seat) {
+          seat.book();
+        });
+      });
+      seats[0][0].cancel();
+
+      seatFinder = new SeatsFinder(seats, maxNumOfSeatsInARow);
+
+      expect(seatFinder.find(2).length).toEqual(0);
+    });
+
   });
 
 });

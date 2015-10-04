@@ -1,4 +1,4 @@
-define(['seat-booking-system/module/seat'], function() {
+define(['module/seat'], function() {
   'use strict';
 
   var Finder;
@@ -81,7 +81,7 @@ define(['seat-booking-system/module/seat'], function() {
       });
 
       //If found seat
-      if (seats.length > 0) {
+      if (seats.length === numOfSeatsRequired) {
         //return first match
         return seats;
       }

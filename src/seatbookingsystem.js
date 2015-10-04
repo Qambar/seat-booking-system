@@ -1,6 +1,6 @@
 define([
-  'seat-booking-system/module/seats/initializer',
-  'seat-booking-system/module/seats/finder'
+  'module/seats/initializer',
+  'module/seats/finder'
 ], function(SeatsInitializer, SeatsFinder) {
   'use strict';
 
@@ -45,7 +45,13 @@ define([
      * @returns {Array}
      */
     book: function(numOfSeatsRequired) {
+
+      if (isNaN(numOfSeatsRequired)) {
+        throw new Error('Invalid Argument for numOfSeatsRequired');
+      }
+
       var seats = this._seatsFinder.find(numOfSeatsRequired);
+
       if (seats.length > 0) {
         seats.forEach(function(seat) {
           seat.book();

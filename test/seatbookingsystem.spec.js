@@ -29,6 +29,12 @@ define(['seatbookingsystem'], function(SeatBookingSystem) {
       expect(sbs.getAllSeats().length).toEqual(14);
     });
 
+    it('booking checks for invalid number', function() {
+      expect(function() {
+        sbs.book('NOTANUMBER');
+      }).toThrow(new Error('Invalid Argument for numOfSeatsRequired'));
+    });
+
   });
 
 });
