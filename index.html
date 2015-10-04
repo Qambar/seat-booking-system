@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example - Train Booking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./node_modules/requirejs/require.js"></script>
+</head>
+
+<body>
+    <h1 class="main-heading">Train Booking System</h1>
+
+
+    <div class="legend">
+        <div class="seat seat-available">XXX</div> = Available
+        <div class="seat">XXXB</div> = Booked
+    </div>
+
+    <div class="instructions">
+        You can cancel a booked seat by clicking on it.
+    </div>
+
+    <div class="booking-form">
+        <form >
+            <label>How many seats do you want ?</label>
+            <select name="numberOfSeats" class="js-number-of-seats">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button class="js-book-seat">Book Seat(s)</button>
+        </form>
+    </div>
+
+    <div id="js-seat-map-container" class="seat-map-container"></div>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
