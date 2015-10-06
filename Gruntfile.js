@@ -23,7 +23,6 @@ module.exports = function(grunt) {
 
     //Load tasks from the specified Grunt plugin.
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-fixmyjs');
 
     //Register an "alias task" or a task function.
     grunt.registerTask('lint', ['jshint', 'jscs']);
